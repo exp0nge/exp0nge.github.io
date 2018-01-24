@@ -31,11 +31,11 @@ class App extends React.Component {
             <Breadcrumb.Item>Portfolio</Breadcrumb.Item>
             <Breadcrumb.Item><a id="about">About</a></Breadcrumb.Item>
           </Breadcrumb>
-          <Row>
-            <Col span={4}>
+          <Row gutter={16}>
+            <Col xs={{ span: 8, offset: 8 }} lg={{ span: 4, offset: 0 }}>
               <Card
                 hoverable={false}
-                style={{ width: 240 }}
+                style={{ width: '100%' }}
                 cover={<img alt="example" src={headshotPicture} />}
               >
                 <Meta
@@ -44,9 +44,9 @@ class App extends React.Component {
                 />
               </Card>
             </Col>
-            <Col span={20}>
+            <Col xs={{ span: 24, offset: 0 }} lg={{ span: 20, offset: 0 }}>
               <Row gutter={16}>
-                <Col span={8}>
+                <Col xs={{ span: 12, offset: 6 }} lg={{ span: 8, offset: 0 }}>
                   <Card title="Education" bordered={true} style={{ width: '100%' }}>
                     <List.Item>
                       <List.Item.Meta
@@ -57,10 +57,10 @@ class App extends React.Component {
                     </List.Item>
                   </Card>
                 </Col>
-                <Col span={16}>
+                <Col xs={{ span: 24, offset: 0 }} lg={{ span: 16, offset: 0 }}>
                   <Card title="Technical Skills" bordered={true} style={{ width: '100%' }}>
                     <List
-                      grid={{ gutter: 16, column: 4 }}
+                      grid={{ gutter: 16, xs: 1, sm: 2, md: 3, lg: 4, xl: 4, xxl: 4 }}
                       itemLayout="horizontal"
                       dataSource={SKILLS}
                       renderItem={(item: { [index: string]: string }) => (
