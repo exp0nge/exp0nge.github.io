@@ -1,15 +1,30 @@
 import * as React from 'react';
-import { Layout, Menu, Breadcrumb, Card, Row, Col, List, Avatar } from 'antd';
+import { Layout, Menu, Breadcrumb, Card, Row, Col, List, Avatar, Icon } from 'antd';
 const { Header, Content, Footer } = Layout;
 const { Meta } = Card;
 
 import './App.css';
 import { SKILLS } from './data/skills';
 import { EXPERIENCE } from './data/experience';
+import { PROJECTS } from './data/projects';
 
 const headshotPicture = require('./img/selfie.jpg');
+const IconText = ({ type, text, link }: { type: string, text: string, link: string }) => (
+  <span>
+    <Icon type={type} style={{ marginRight: 8 }} onClick={() => { window.location.href = link; }} />
+    <a href={link}>{text}</a>
+  </span>
+);
+
+const pagination = {
+  pageSize: 10,
+  current: 1,
+  total: PROJECTS.length,
+  // onChange: (() => {  }),
+};
 
 class App extends React.Component {
+
   render() {
     return (
       <Layout>
@@ -24,6 +39,13 @@ class App extends React.Component {
             <Menu.Item key="0"><a href="#about">About</a></Menu.Item>
             <Menu.Item key="1"><a href="#experience">Experience</a></Menu.Item>
             <Menu.Item key="2"><a href="#projects">Projects</a></Menu.Item>
+            <Menu.Item key="3">
+              <a
+                href="https://raw.githubusercontent.com/exp0nge/exp0nge.github.io/develop/public/MD_R_Islam_Resume.pdf"
+              >
+                Resume
+              </a>
+            </Menu.Item>
           </Menu>
         </Header>
         <Content style={{ padding: '0 50px', marginTop: 64 }}>
@@ -51,7 +73,7 @@ class App extends React.Component {
                     <List.Item>
                       <List.Item.Meta
                         // avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
-                        title="B.S. in Computer Science, Magna Cum Laude (May 2017)"
+                        title="B.S. in Computer Science, Magna Cum Laude"
                         description="The City College of New York - CUNY"
                       />
                     </List.Item>
@@ -78,6 +100,7 @@ class App extends React.Component {
             </Col>
           </Row>
         </Content>
+
         <Content style={{ padding: '0 50px', marginTop: 64 }}>
           <Breadcrumb style={{ margin: '16px 0' }}>
             <Breadcrumb.Item>Portfolio</Breadcrumb.Item>
@@ -116,6 +139,38 @@ class App extends React.Component {
             <Breadcrumb.Item>Portfolio</Breadcrumb.Item>
             <Breadcrumb.Item><a id="projects">Projects</a></Breadcrumb.Item>
           </Breadcrumb>
+
+          <Row gutter={16}>
+            <Col xs={{ span: 24, offset: 0 }} lg={{ span: 16, offset: 4 }}>
+              <Card title="Projects" bordered={true} style={{ width: '100%' }}>
+                <List
+                  itemLayout="vertical"
+                  size="large"
+                  pagination={pagination}
+                  dataSource={PROJECTS}
+                  renderItem={(item: { [index: string]: string }) => (
+                    <List.Item
+                      key={item.title}
+                      actions={[<IconText type="arrow-right" text="Visit" key={item.title} link={item.link} />]}
+                      extra={<img
+                        width={150}
+                        height={150}
+                        alt="logo"
+                        src={item.href}
+                      />}
+                    >
+                      <List.Item.Meta
+                        avatar={<Avatar src={item.avatar} />}
+                        title={<a href={item.href}>{item.title}</a>}
+                        description={item.description}
+                      />
+                      {item.content}
+                    </List.Item>
+                  )}
+                />
+              </Card>
+            </Col>
+          </Row>
 
         </Content>
 
