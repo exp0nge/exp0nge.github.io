@@ -2,9 +2,10 @@
     "name": "portfolio",
     "version": "0.1.0",
     "private": true,
-    "homepage": "http://printdebug.com",
+    "homepage": "https://printdebug.com",
     "dependencies": {
         "antd": "^3.1.4",
+        "enquire.js": "^2.1.6",
         "gh-pages": "^1.1.0",
         "react": "^16.2.0",
         "react-dom": "^16.2.0",
