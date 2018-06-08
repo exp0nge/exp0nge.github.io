@@ -4,7 +4,12 @@ export const EXPERIENCE = [{
     'location': 'Yorktown Heights, NY',
     'startDate': 'September 2018',
     'endDate': 'Present',
-    'description': ['Ongoing']
+    'description': [
+        'Developing automated machine learning system to win data science competitions',
+        'Maintaining and supporting booth display frontend for major conferences remotely',
+        'Developed and deployed the backend for a web app for NIPS 2017 to show bias in AI and ' +
+        'also collect data from interactions by users and which is available to the public today'
+    ]
 },
 {
     'company': 'Appfigures',
