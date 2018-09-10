@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import App from './App';
-import {registerServiceWorker, unregister} from './registerServiceWorker';
+import registerServiceWorker from './registerServiceWorker';
 import './index.css';
 
 ReactDOM.render(
@@ -9,5 +9,4 @@ ReactDOM.render(
   document.getElementById('root') as HTMLElement
 );
 
-unregister();
 registerServiceWorker();
