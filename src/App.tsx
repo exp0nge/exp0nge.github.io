@@ -86,7 +86,7 @@ class App extends React.Component {
                 >
                   <Meta
                     title="MD R. Islam"
-                    description="Software Engineer @ IBM"
+                    description="Software Engineer @ Gemini.com"
                   />
                 </Card>
               </Col>
