@@ -1,14 +1,14 @@
 {
   "main.css": "static/css/main.002bd925.css",
   "main.css.map": "static/css/main.002bd925.css.map",
-  "main.js": "static/js/main.a8f756e9.js",
-  "main.js.map": "static/js/main.a8f756e9.js.map",
-  "static/media/aog.png": "static/media/aog.4c1d11a1.png",
-  "static/media/dj.svg": "static/media/dj.003d2b2d.svg",
-  "static/media/doorman.png": "static/media/doorman.18d337d0.png",
-  "static/media/dotnet.svg": "static/media/dotnet.536938fe.svg",
-  "static/media/flask.svg": "static/media/flask.9085149a.svg",
-  "static/media/java.svg": "static/media/java.7f3c1fa4.svg",
-  "static/media/js.png": "static/media/js.1cff25ec.png",
-  "static/media/selfie.jpg": "static/media/selfie.6a98d13a.jpg"
+  "main.js": "static/js/main.c4f73007.js",
+  "main.js.map": "static/js/main.c4f73007.js.map",
+  "static\\media\\aog.png": "static/media/aog.4c1d11a1.png",
+  "static\\media\\dj.svg": "static/media/dj.003d2b2d.svg",
+  "static\\media\\doorman.png": "static/media/doorman.18d337d0.png",
+  "static\\media\\dotnet.svg": "static/media/dotnet.536938fe.svg",
+  "static\\media\\flask.svg": "static/media/flask.9085149a.svg",
+  "static\\media\\java.svg": "static/media/java.7f3c1fa4.svg",
+  "static\\media\\js.png": "static/media/js.1cff25ec.png",
+  "static\\media\\selfie.jpg": "static/media/selfie.6a98d13a.jpg"
 }
