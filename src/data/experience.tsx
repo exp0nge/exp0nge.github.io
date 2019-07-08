@@ -6,6 +6,7 @@ export const EXPERIENCE = [
         'startDate': 'September 2019',
         'endDate': 'Present',
         'description': [
+            'Fiat on-ramp'
         ]
     },
     {
