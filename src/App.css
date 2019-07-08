@@ -34,3 +34,49 @@
 .ant-card {
     margin-bottom: 10px;
 }
+
+@media only screen and (max-width: 800px) {
+    p,
+    .ant-card *,
+    .ant-breadcrumb-link {
+        font-size: 2vmax;
+    }
+    .ant-btn {
+        font-size: 2vmax;
+        height: auto;
+    }
+    .ant-list-item-meta-content * {
+        line-height: calc(1.1em + 0.5vw);
+    }
+}
+
+@media only screen and (min-width: 2000px) {
+    p,
+    .ant-card *,
+    .ant-breadcrumb-link {
+        font-size: 1vmax;
+    }
+    .ant-btn {
+        font-size: 1vmax;
+        height: auto;
+    }
+    .ant-list-item-meta-content * {
+        line-height: calc(1.1em + 0.5vw);
+    }
+}
+
+@media only screen and (min-width: 6000px) {
+    p,
+    .ant-card *,
+    .ant-breadcrumb-link {
+        font-size: 1vmax;
+        padding: 2vmin;
+    }
+    .ant-btn {
+        font-size: 1vmax;
+        height: auto;
+    }
+    .ant-list-item-meta-content * {
+        line-height: calc(1.1em + 0.5vw);
+    }
+}

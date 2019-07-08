@@ -9,6 +9,7 @@ import { EXPERIENCE } from './data/experience';
 import { PROJECTS } from './data/projects';
 
 const headshotPicture = require('./img/selfie.jpg');
+const resumeLink = 'https://raw.githubusercontent.com/exp0nge/exp0nge.github.io/develop/public/MD_R_Islam_Resume.pdf';
 const IconText = ({ type, text, link }: { type: string, text: string, link: string }) => (
   <span>
     <Icon type={type} style={{ marginRight: 8 }} onClick={() => { window.location.href = link; }} />
@@ -50,22 +51,28 @@ class App extends React.Component {
           </Breadcrumb>
           <Row gutter={16}>
             <Col xs={{ span: 24 }} lg={{ span: 8, offset: 0 }}>
-              <Button
-                type="primary"
-                icon="download"
-                style={{ marginBottom: 16 }}
-                href="https://raw.githubusercontent.com/exp0nge/exp0nge.github.io/develop/public/MD_R_Islam_Resume.pdf"
-              >
-                Download Resume
-              </Button>
-              <Button
-                type="primary"
-                icon="linkedin"
-                style={{ marginBottom: 16, marginLeft: 10 }}
-                href="https://www.linkedin.com/in/mdislamr/"
-              >
-                LinkedIn
-              </Button>
+              <Row>
+                <Col>
+                  <Button
+                    type="primary"
+                    icon="download"
+                    style={{ marginBottom: 16 }}
+                    href={resumeLink}
+                  >
+                    Download Resume
+                  </Button>
+                </Col>
+                <Col>
+                  <Button
+                    type="primary"
+                    icon="linkedin"
+                    style={{ marginBottom: 16 }}
+                    href="https://www.linkedin.com/in/mdislamr/"
+                  >
+                    LinkedIn
+                  </Button>
+                </Col>
+              </Row>
               <Card
                 hoverable={false}
                 style={{ width: '100%' }}
@@ -89,7 +96,7 @@ class App extends React.Component {
               </Card>
               <Card title="Technical Skills" bordered={true} style={{ width: '100%', marginBottom: 16 }}>
                 <List
-                  grid={{ gutter: 0, xs: 1, sm: 2, md: 2, lg: 2, xl: 2, xxl: 2 }}
+                  grid={{ gutter: 0, xs: 1, sm: 2, md: 2, lg: 1, xl: 2, xxl: 4 }}
                   itemLayout="horizontal"
                   dataSource={SKILLS}
                   renderItem={(item: { [index: string]: string }) => (
