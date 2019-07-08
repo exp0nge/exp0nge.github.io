@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Layout, Breadcrumb, Card, Row, Col, List, Avatar, Icon } from 'antd';
+import { Layout, Breadcrumb, Card, Row, Col, List, Avatar, Icon, Button } from 'antd';
 const { Content } = Layout;
 const { Meta } = Card;
 
@@ -51,6 +51,22 @@ class App extends React.Component {
           </Breadcrumb>
           <Row gutter={16}>
             <Col xs={{ span: 24 }} lg={{ span: 8, offset: 0 }}>
+              <Button
+                type="primary"
+                icon="download"
+                style={{ marginBottom: 16 }}
+                href="https://raw.githubusercontent.com/exp0nge/exp0nge.github.io/develop/public/MD_R_Islam_Resume.pdf"
+              >
+                Download Resume
+              </Button>
+              <Button
+                type="primary"
+                icon="linkedin"
+                style={{ marginBottom: 16, marginLeft: 10 }}
+                href="https://www.linkedin.com/in/mdislamr/"
+              >
+                LinkedIn
+              </Button>
               <Card
                 hoverable={false}
                 style={{ width: '100%' }}
