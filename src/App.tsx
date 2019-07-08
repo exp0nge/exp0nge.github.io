@@ -46,7 +46,6 @@ class App extends React.Component {
       <Layout>
         <Content style={{ padding: '0 50px', marginTop: 64 }}>
           <Breadcrumb style={{ margin: '16px 0' }}>
-            <Breadcrumb.Item>Portfolio</Breadcrumb.Item>
             <Breadcrumb.Item><a id="about">About</a></Breadcrumb.Item>
           </Breadcrumb>
           <Row gutter={16}>
@@ -88,7 +87,7 @@ class App extends React.Component {
                   />
                 </List.Item>
               </Card>
-              <Card title="Technical Skills" bordered={true} style={{ width: '100%' }}>
+              <Card title="Technical Skills" bordered={true} style={{ width: '100%', marginBottom: 16 }}>
                 <List
                   grid={{ gutter: 0, xs: 1, sm: 2, md: 2, lg: 2, xl: 2, xxl: 2 }}
                   itemLayout="horizontal"
@@ -105,44 +104,47 @@ class App extends React.Component {
               </Card>
             </Col>
             <Col xs={{ span: 24 }} lg={{ span: 16, offset: 0 }}>
-              {
-                EXPERIENCE.map((item, i) =>
-                  <div key={i}>
-                    <Row>
-                      <Col xs={{ span: 24, offset: 0 }} lg={{ span: 24, offset: 0 }}>
-                        <Card
-                          title={item.position +
-                            ' @ ' +
-                            item.company +
-                            ' / ' +
-                            item.location}
-                          bordered={false}
-                          style={{ width: '100%' }}
-                          extra={item.startDate + ' - ' + item.endDate}
-                        >
-                          {item.description.map((itemDescription, descId) =>
-                            <p key={descId}>- {itemDescription}</p>
-                          )}
-                        </Card>
-                      </Col>
-                    </Row>
-                    <div style={{ marginBottom: 16 }} />
-                  </div>
-                )
-              }
-
+              <Content>
+                <Breadcrumb style={{ margin: '16px 0' }}>
+                  <Breadcrumb.Item><a id="experience">Experience</a></Breadcrumb.Item>
+                </Breadcrumb>
+                {
+                  EXPERIENCE.map((item, i) =>
+                    <div key={i}>
+                      <Row>
+                        <Col xs={{ span: 24, offset: 0 }} lg={{ span: 24, offset: 0 }}>
+                          <Card
+                            title={item.position +
+                              ' @ ' +
+                              item.company +
+                              ' / ' +
+                              item.location}
+                            bordered={false}
+                            style={{ width: '100%' }}
+                            extra={item.startDate + ' - ' + item.endDate}
+                          >
+                            {item.description.map((itemDescription, descId) =>
+                              <p key={descId}>- {itemDescription}</p>
+                            )}
+                          </Card>
+                        </Col>
+                      </Row>
+                      <div style={{ marginBottom: 16 }} />
+                    </div>
+                  )
+                }
+              </Content>
             </Col>
           </Row>
         </Content>
 
-        <Content style={{ padding: '0 50px', marginTop: 64 }}>
+        <Content style={{ padding: '0 50px' }}>
           <Breadcrumb style={{ margin: '16px 0' }}>
-            <Breadcrumb.Item>Portfolio</Breadcrumb.Item>
             <Breadcrumb.Item><a id="projects">Projects</a></Breadcrumb.Item>
           </Breadcrumb>
 
           <Row gutter={16}>
-            <Col xs={{ span: 24, offset: 0 }} lg={{ span: 16, offset: 4 }}>
+            <Col xs={{ span: 24, offset: 0 }} lg={{ span: 24, offset: 0 }}>
               <Card title="Projects" bordered={true} style={{ width: '100%' }}>
                 <List
                   itemLayout="vertical"
