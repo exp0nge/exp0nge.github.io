@@ -1,20 +1,21 @@
 export const EXPERIENCE = [
     {
         'company': 'Gemini.com',
-        'position': 'Software Engineer',
+        'position': 'Staff Software Engineer',
         'location': 'New York, NY',
-        'startDate': 'September 2019',
+        'startDate': 'September 2018',
         'endDate': 'Present',
         'description': [
-            'Fiat on-ramp'
+            'Fiat on-ramp',
+            'Wallet engineering'
         ]
     },
     {
         'company': 'IBM',
         'position': 'Software Engineer',
         'location': 'Yorktown Heights, NY',
-        'startDate': 'August 2018',
-        'endDate': 'August 2019',
+        'startDate': 'August 2017',
+        'endDate': 'August 2018',
         'description': [
             'Developed automated machine learning system to rank high in data science competitions',
             'Maintained and supported booth display frontend for major conferences remotely',
