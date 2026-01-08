@@ -29,5 +29,13 @@ export const SKILLS = [{
 {
     'name': 'C#/.NET',
     'img': require('../img/dotnet.svg')
+},
+{
+    'name': 'React',
+    'img': require('../img/js.png')
+},
+{
+    'name': 'TypeScript',
+    'img': require('../img/js.png')
 }
 ];

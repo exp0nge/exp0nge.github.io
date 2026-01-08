@@ -50,6 +50,29 @@
     }
 }
 
+/* Dark Theme Overrides */
+body, .ant-layout, .ant-card {
+    background-color: #222 !important;
+    color: #eee;
+}
+
+.ant-card-head, .ant-card-head-title, .ant-list-item-meta-title a, b, .ant-breadcrumb-link a {
+    color: #eee !important;
+}
+
+.ant-list-item-meta-description, p, .ant-card-extra, .ant-breadcrumb-separator {
+    color: #ccc !important;
+}
+
+.ant-card-bordered {
+    border: 1px solid #555;
+}
+
+.ant-btn-primary {
+    background-color: #444;
+    border-color: #555;
+}
+
 @media only screen and (min-width: 2000px) {
     p,
     .ant-card *,
