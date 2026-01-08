@@ -17,5 +17,11 @@ export const PROJECTS = [
         'link': 'https://assistant.google.com/explore/search?q=exp0nge&hl=en',
         'href': require('../img/aog.png'),
         'description': 'These are all the Actions I have developed for the Google Assistant platform.'
+    },
+    {
+        'title': 'Portfolio Website',
+        'link': 'https://exp0nge.github.io/',
+        'href': require('../img/selfie.jpg'),
+        'description': 'This website! A portfolio to showcase my skills and experience.'
     }
 ];
